@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MvcMovie.Models;
 using System.Diagnostics;
-
+using Microsoft.AspNetCore.Authorization;
 namespace MvcMovie.Controllers
 {
     public class HomeController : Controller
@@ -17,7 +17,7 @@ namespace MvcMovie.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
